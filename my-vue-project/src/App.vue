@@ -6,14 +6,18 @@
 
 <script>
   import Footer from './components/component-detail/Footer'
+  import Carousel from './components/component-detail/Carousel'
 export default {
   name: "App",
   components: {
-    'Footer':Footer
+    'Footer':Footer,
+    'Carousel':Carousel
   }
 };
 </script>
 
 <style>
-
+body {
+  margin: 0;
+}
 </style>

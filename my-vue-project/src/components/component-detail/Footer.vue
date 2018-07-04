@@ -1,4 +1,5 @@
 <template>
+  <div class="foot">
     <div class="container">
       <div class="slice">
         <p class="information">电话：025-888888</p>
@@ -13,6 +14,10 @@
         <p>扫一扫二维码关注</p>
       </div>
     </div>
+    <div class="brand">
+      <p>版权所有 © 2017-2018 南京法奔信息科技有限公司 苏icp备88888888号</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -49,4 +54,38 @@ align-items: center;
   .slice .information {
     margin-bottom: 50px ;
   }
+  .brand {
+    margin: 0px;
+    background-color: #2e2f34;
+  }
+  .brand p{
+    text-align: center;
+    margin: 0px;
+    padding: 30px;
+    color: #fff;
+    font-size: 18px;
+  }
+
+@media (max-width: 414px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .slice p {
+   margin-bottom: 0px;
+  }
+}
+@media (max-width: 320px) {
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 360px) {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 </style>

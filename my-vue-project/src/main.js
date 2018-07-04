@@ -4,7 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Footerbar from './components/component-detail/Footer';
+import Carousel from  './components/component-detail/Carousel';
 Vue.component('Footerbar',Footerbar)
+Vue.component('Carousel',Carousel)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

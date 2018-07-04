@@ -1,34 +1,10 @@
 <template>
   <div class="main">
-    <div class="container">
-    <div class="nav">
-      <div class="logo">
-        <img src="@/assets/logo.png">
-      </div>
-      <div class="item-list">
-        <ul>
-          <li>
-            <router-link to='/'>首页</router-link>
-            </li>
-          <li><router-link to='/product'>产品</router-link></li>
-          <li> <router-link to='/'>新闻</router-link></li>
-          <li> <router-link to='/'>关于我们</router-link></li>
-          <li><button class="ask-use">申请使用</button></li>
-        </ul>
-      </div>
-    </div>
-    </div>
-
-    <div class="content">
-      <div class="carousel">
-        <p>任何一个功能都是精心打磨</p>
-      </div>
-
-    </div>
+<Navbar></Navbar>
     <!-- 产品介绍 -->
-    <div class="product-info">
+    <div class="product">
       <div class="product-info-text">
-        <p class="info-title">产品功能</p>
+        <p class="info-title-unique">产品功能</p>
         <p class="info-detail">六大核心功能，全面协助律师办案</p>
       </div>
       <div class="info-cell">
@@ -45,8 +21,8 @@
           <div>
             <img src="/static/images/intro-1.png" alt="">
             <div>
-              <p>策略分析系统</p>
-              <p>功能介绍</p>
+              <p class="small-title">策略分析系统</p>
+              <p class="cell-intro">功能介绍</p>
             </div>
           </div>
         </div>
@@ -54,8 +30,8 @@
           <div>
             <img src="/static/images/intro-3.png" alt="">
             <div>
-              <p>协作办案系统</p>
-              <p>功能介绍</p>
+              <p class="small-title">协作办案系统</p>
+              <p class="cell-intro">功能介绍</p>
             </div>
           </div>
         </div>
@@ -63,8 +39,8 @@
           <div>
             <img src="/static/images/intro-4.png" alt="">
             <div>
-              <p>知识管理系统</p>
-              <p>功能介绍</p>
+              <p class="small-title">知识管理系统</p>
+              <p class="cell-intro">功能介绍</p>
             </div>
           </div>
         </div>
@@ -72,8 +48,8 @@
           <div>
             <img src="/static/images/intro-5.png" alt="">
             <div>
-              <p>文书撰写系统</p>
-              <p>功能介绍</p>
+              <p class="small-title">文书撰写系统</p>
+              <p class="cell-intro">功能介绍</p>
             </div>
           </div>
         </div>
@@ -81,8 +57,8 @@
           <div>
             <img src="/static/images/intro-6.png" alt="">
             <div>
-              <p>档案管理系统</p>
-              <p>功能介绍</p>
+              <p class="small-title">档案管理系统</p>
+              <p class="cell-intro">功能介绍</p>
             </div>
           </div>
         </div>
@@ -138,7 +114,7 @@
        <p class="info-detail">安全稳定是律呗软件核心优势之一。我们采用目前最好的加密技术，对所有数据（文字、图片、语音、视频）都进行了128位不可逆加密，存储过程采取软硬结合加密、立体式防窃取、可追踪、可还原、自动备份、快速恢复等先进技术策略。系统通过MAC地址对每个帐号进行校验，每次操作过程系统始终都安全稳定。</p>
        <img src="static/images/characristic-img.png" alt="" class="info-detail-img">
     </div>
-    <div>
+    <div class="serve">
        <p class="info-title">服务支持</p>
 
       <div class="info-cell">
@@ -183,8 +159,12 @@
     </div>
     </div>
     <div class="try">
-      <p class="left">FREE TRIAL | 免费试用</p>
-      <p class="right">找不到合适的产品?小律可以帮您<button>点我呦</button></p>
+      <div class="left">
+      <p class="left-text">FREE TRIAL | 免费试用</p>
+      </div>
+      <div class="right">
+      <p class="right-text">找不到合适的产品?小律可以帮您<button>点我呦</button></p>
+      </div>
     </div>
 <Footerbar></Footerbar>
   </div>
@@ -192,76 +172,21 @@
 </template>
 
 <script>
+  import Navbar from  './component-detail/Navbar';
   import Footerbar from './component-detail/Footer';
 export default {
   name: "Home",
   data() {
     return {};
   },
-  components : {
+  components: {
     'Footerbar':Footerbar,
-  }
-};
+    'Navbar':Navbar}
+}
 </script>
 
 
 <style scoped>
-.container {
-  width: 100%;
-}
-.content {
-  margin-top: 100px;
-}
-.nav {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  top: 0px;
-  background-color: lawngreen;
-  z-index: 10;
-  margin-left: 0px;
-}
-.logo img {
-  position: relative;
-  left: 100%;
-  top: 10px;
-}
-.item-list {
-  position: relative;
-  left: 35%;
-}
-.nav .item-list ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-
-  align-content: center;
-}
-.nav .item-list ul li {
-  list-style: none;
-  display: inline;
-  align-content: space-between;
-  padding: 10px;
-}
-.ask-use {
-  width: 137px;
-  height: 44px;
-  background: rgba(86, 154, 249, 1);
-  border-radius: 3px;
-  position: relative;
-  top: -15%;
-}
-.logo,
-.item-list {
-  display: inline-block;
-  margin-left: 20px;
-}
-.item-list {
-}
-.logo img {
-  width: 40px;
-  height: 40px;
-}
 
 .info-cell {
   display: flex;
@@ -272,13 +197,27 @@ export default {
   padding-top: 5px;
   margin: 0 auto;
 }
-.product-info {
+.product {
   text-align: center;
 }
+.small-title {
+  font-size: 22px;
+
+}
+p {
+  margin: 0;
+}
 .info-title {
-  margin-top: 90px;
+  margin-bottom: 60px;
   font-size: 30px;
   text-align: center;
+}
+.info-title-unique {
+  margin: 0px;
+  font-size: 30px;
+}
+.product-info-text {
+  margin-bottom: 60px;
 }
 .cell {
   width: 600px;
@@ -314,6 +253,13 @@ export default {
 }
 .info-detail {
   padding:  0 50px;
+}
+.product, .characteristic, .serve, .customer {
+  padding: 90px 0;
+}
+.strength {
+  background-color: #fafafb;
+  padding: 90px 0;
 }
 
 .cell div {
@@ -359,27 +305,41 @@ export default {
   margin: 20px;
 }
 .try {
+  height: 105px;
   display: flex;
   background-image: url("../assets/background-img.png") ;
-  background-repeat: no-repeat;
+  background-size: 100%;
+  background-repeat: repeat;
   justify-content: center;
+  align-items: center;
   color: #fff;
   align-content: space-between;
 }
+
 .try .left {
+  margin: auto 0;
   padding-right: 100px;
 }
+
 .try .right button {
-  background: rgba(0, 118, 248, 1);
+  background-color: #0076f8;
+  border: none;
   border-radius: 3px;
-  /*box-shadow: 2px 6px 3px rgba(118, 174, 251, 1);*/
   font-size: 20px;
-  font-family: MicrosoftYaHei;
+  margin-left: 10px;
   color: rgba(255, 255, 255, 1);
-  line-height: 0px;
+  font-size: 20px;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1280px) {
+  .cell {
+    width: 450px;
+  }
+  .info-child {
+    width: 300px;
+  }
+}
+@media (max-width: 1080px) {
   .cell {
     width: 450px;
   }
@@ -387,12 +347,48 @@ export default {
     width: 270px;
   }
 }
-  @media (max-width: 870px) {
+  @media (max-width: 980px) {
     .cell {
       width:300px;
     }
     .info-child {
-      width: 200px;
+      width: 240px;
+    }
+    .info-detail-img {
+      width: 720px;
+      height: 320px;
+    }
+  }
+
+@media (max-width: 720px) {
+  .main {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .info-detail-img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 375px) {
+  .info-detail-img {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media (max-width: 360px) {
+  .info-detail-img {
+    width: 300px;
+    height: 200px;
+  }
+}
+  @media (max-width: 320px) {
+    .info-detail-img {
+      width: 300px;
+      height: 200px;
     }
   }
 </style>

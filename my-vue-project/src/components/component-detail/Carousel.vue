@@ -1,0 +1,88 @@
+<template>
+  <div id="topBanner" style="padding-top: 5px;" class="slide" >
+    <div v-for="(imgUrl, index) in bannerList" v-show="index===mark" :key="index" class="slideshow">
+      <a href="#">
+        <img :src=imgUrl>
+      </a>
+    </div>
+  </div>
+</template>
+
+<script>
+    export default {
+        name: "Carousel",
+      data () {
+        return {
+          mark: 0, //比对图片索引的变量
+          bannerList:["../static/images/carousel-1.png","../static/images/carousel-2.png","../static/images/carousel-3.png"]
+        }
+      },
+      methods: {
+        autoPlay () {
+          this.mark++;
+          if (this.mark === 3) { //当遍历到最后一张图片置零
+            this.mark = 0
+          }
+        },
+        play () {
+          setInterval(this.autoPlay, 2500)
+        },
+        change (i) {
+          this.mark = i
+        }
+      },
+      created () {
+        this.play()
+      }
+
+    }
+</script>
+
+<style scoped>
+  .slide {
+    width: 950px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 80px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+  .slideshow {
+    width: 800px;
+    height: 300px;
+    display: inline-block;
+  }
+  img {
+    width: 550px;
+    height: 240px;
+  }
+
+  @media (max-width: 768px) {
+    .slide {
+      width: 100%;
+      height: 160px;
+    }
+    .slideshow {
+      width: 100%;
+    }
+    img {
+      width: 300px;
+      height:150px ;
+    }
+  }
+
+@media (max-width: 375px){
+  .slide {
+width: 100%;
+    height: 160px;
+  }
+  .slideshow {
+    width: 100%;
+  }
+  img {
+width: 300px;
+    height:150px ;
+  }
+}
+</style>
