@@ -91,26 +91,36 @@
         </div>
         <div class="apply">
           <form >
+            <div class="label-cell">
             <label for="name">
-              <span>您的姓名</span>
-              <input type="text" name="name" ></label>
-
+             您的姓名
+              </label>
+            <div class="label-for" name="name"><input type="text"></div>
+            </div>
+            <div class="label-cell">
             <label for="organization">
-              <span>律所名称</span>
-              <input type="text" name="organization"></label>
-
-            <label for="identity">
-              身份
-              <span><input type="radio" name="identity" value="1">律所主任</span>
+              律所名称
+              </label>
+<div class="label-for" name="organization"><input type="text" ></div>
+            </div>
+            <div class="label-cell">
+              <label for="identity">身份</label>
+              <div class="label-for" name="identity" style="vertical-align: top" >
+                <span><input type="radio" name="identity" value="1">律所主任</span>
               <span><input type="radio" name="identity" value="2">律所合伙人</span>
               <span><input type="radio" name="identity" value="3">执业律师</span>
               <span><input type="radio" name="identity" value="4">助理律师</span>
               <span><input type="radio" name="identity" value="5">其他身份 <input type="text" id="other"></span>
-            </label>
-            <label for="phone">联系电话 <input type="phone" name="phone"></label>
-            <label for="note">
-              备注信息
-              <textarea name="note" id="" cols="30" rows="3" style="vertical-align: top"></textarea></label>
+              </div>
+            </div>
+            <div class="label-cell">
+              <label for="phone">联系电话</label>
+              <div class="label-for" name="phone"><input type="phone" ></div>
+            </div>
+            <div class="label-cell">
+              <label for="note">备注信息 </label>
+                <div class="label-for"><textarea name="note" id="" cols="30" rows="3" style="vertical-align: top"></textarea></div>
+            </div>
           </form>
           <button id="apply">立即申请</button>
         </div>
@@ -200,11 +210,6 @@ width: 40px;
     height: 30px;
     margin: 10px ;
   }
-  label {
-    display: block;
-    margin-bottom: 8%;
-    width: 100%;
-  }
   .partner-info {
     font-size: 30px;
   }
@@ -273,8 +278,14 @@ p.weight-text {
   .apply form {
     text-align: left;
   }
+  #unique span:last-child {
+    display: flex;
+    display: inline-block;
+  }
   #other {
-    width: 60%;
+display: inline-block;
+    width: auto;
+    zoom: 1;
   }
   label:nth-of-type(3)>span {
     margin:5%;
@@ -283,9 +294,9 @@ p.weight-text {
     position: relative;
     left: 5%;
   }
-  label input[type=text],input[type=phone] {
+   input[type=text],input[type=phone] {
     display: inline-block;
-    width: 80%;
+    width: 100%;
   }
   #apply {
     width: 240px;
@@ -296,8 +307,18 @@ p.weight-text {
     margin:  auto 0;
     color:#FFF
   }
-
-
+  label {
+    display: inline-block;
+    width: 20%;
+    text-align: left;
+  }
+.label-for {
+  display: inline-block;
+  width: 75%;
+}
+.label-cell {
+  margin-bottom: 8%;
+}
   @media (max-width: 414px) {
 
   }
