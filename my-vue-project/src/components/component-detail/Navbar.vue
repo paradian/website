@@ -71,7 +71,7 @@
     color: #FFFFFF;
   }
   .ask-use {
-    width: 137px;
+    width: 120px;
     height: 44px;
     background: rgba(86, 154, 249, 1);
     border: none;

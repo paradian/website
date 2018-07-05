@@ -14,7 +14,7 @@
       data () {
         return {
           mark: 0, //比对图片索引的变量
-          bannerList:["../static/images/carousel-1.png","../static/images/carousel-2.png","../static/images/carousel-3.png"]
+          bannerList:["/static/images/carousel-1.png","/static/images/carousel-2.png","/static/images/carousel-3.png"]
         }
       },
       methods: {
@@ -40,8 +40,8 @@
 
 <style scoped>
   .slide {
-    width: 950px;
-    height: 300px;
+    width: 85%;
+    height: auto;
     margin: 0 auto;
     margin-top: 80px;
     overflow: hidden;
@@ -49,28 +49,28 @@
     text-align: center;
   }
   .slideshow {
-    width: 800px;
-    height: 300px;
+    width: 80%;
+    height: auto;
     display: inline-block;
   }
   img {
-    width: 550px;
-    height: 240px;
+    width: 90%;
+    height: 300px;
   }
 
-  @media (max-width: 768px) {
-    .slide {
-      width: 100%;
-      height: 160px;
-    }
-    .slideshow {
-      width: 100%;
-    }
-    img {
-      width: 300px;
-      height:150px ;
-    }
-  }
+  /*@media (max-width: 768px) {*/
+    /*.slide {*/
+      /*width: 100%;*/
+      /*height: 160px;*/
+    /*}*/
+    /*.slideshow {*/
+      /*width: 100%;*/
+    /*}*/
+    /*img {*/
+      /*width: 300px;*/
+      /*height:150px ;*/
+    /*}*/
+  /*}*/
 
 @media (max-width: 375px){
   .slide {

@@ -120,28 +120,28 @@
       <div class="info-cell">
 
       <div class="service-cell">
-        <img src="/static/images/support-1.png" alt="">
+        <img src="/static/images/support1.png" alt="">
         <p class="serve-title">在线客服</p>
         <p class="serve-detail">律呗软件</p>
         <p class="serve-detail">提供从软件购买到结束</p>
         <p class="serve-detail">的全生命周期服务</p>
       </div>
       <div class="service-cell">
-        <img src="/static/images/support-2.png" alt="">
+        <img src="/static/images/support2.png" alt="">
         <p class="serve-title">视屏教程</p>
         <p class="serve-detail">每个客户</p>
         <p class="serve-detail">都可以获取一份详细的</p>
         <p class="serve-detail">软件视屏教程及操作说明</p>
       </div>
       <div class="service-cell">
-        <img src="/static/images/support-3.png" alt="">
+        <img src="/static/images/support3.png" alt="">
         <p class="serve-title">技术支持</p>
         <p class="serve-detail">律呗软件</p>
         <p class="serve-detail">提供5*8小时在线技术支持</p>
         <p class="serve-detail">以及24小时响应的现场服务</p>
       </div>
       <div class="service-cell">
-        <img src="/static/images/support-4.png" alt="">
+        <img src="/static/images/support4.png" alt="">
         <p class="serve-title">行业交流群</p>
         <p class="serve-detail">同行业交流</p>
         <p class="serve-detail">知识分享</p>
@@ -220,17 +220,17 @@ p {
   margin-bottom: 60px;
 }
 .cell {
-  width: 600px;
-  margin: 20px;
+  width: 40%;
+  margin: 3%;
 }
 .info-child {
-  width: 400px;
+  width: 30%;
   height: 100px;
   margin-bottom: 50px;
 }
 .info-child .cell-content {
   height: 100px;
-  width: 200px;
+  width: 100%;
   margin: 0px auto;
 }
 .info-child .img-container {
@@ -247,8 +247,8 @@ p {
 }
 .info-detail-img {
   display: block;
-  width: 840px;
-  height: 360px;
+  width: 70%;
+  height: auto;
   margin: 0 auto;
 }
 .info-detail {
@@ -283,12 +283,12 @@ p {
 }
 
 .service-cell {
-  width: 200px;
+  width: 20%;
   margin-left: 30px;
 }
 .service-cell img {
   width: 85px;
-  height: 80px;
+  height: 75px;
   margin-bottom: 60px;
 }
 .serve-title {
@@ -299,7 +299,7 @@ p {
   color: #999999;
 }
 .partner {
-  width: 200px;
+  width: 20%;
   height: 100px;
   background-color: aquamarine;
   margin: 20px;
@@ -318,7 +318,7 @@ p {
 
 .try .left {
   margin: auto 0;
-  padding-right: 100px;
+  padding-right: 10%;
 }
 
 .try .right button {
@@ -331,46 +331,52 @@ p {
   font-size: 20px;
 }
 
-@media (max-width: 1280px) {
-  .cell {
-    width: 450px;
-  }
-  .info-child {
-    width: 300px;
-  }
-}
-@media (max-width: 1080px) {
-  .cell {
-    width: 450px;
-  }
-  .info-child {
-    width: 270px;
-  }
-}
-  @media (max-width: 980px) {
-    .cell {
-      width:300px;
-    }
-    .info-child {
-      width: 240px;
-    }
-    .info-detail-img {
-      width: 720px;
-      height: 320px;
-    }
-  }
+/*@media (max-width: 1280px) {*/
+  /*.cell {*/
+    /*width: 450px;*/
+  /*}*/
+  /*.info-child {*/
+    /*width: 300px;*/
+  /*}*/
+/*}*/
+/*@media (max-width: 1080px) {*/
+  /*.cell {*/
+    /*width: 450px;*/
+  /*}*/
+  /*.info-child {*/
+    /*width: 270px;*/
+  /*}*/
+/*}*/
+  /*@media (max-width: 980px) {*/
+    /*.cell {*/
+      /*width:300px;*/
+    /*}*/
+    /*.info-child {*/
+      /*width: 240px;*/
+    /*}*/
+    /*.info-detail-img {*/
+      /*width: 720px;*/
+      /*height: 320px;*/
+    /*}*/
+  /*}*/
 
-@media (max-width: 720px) {
-  .main {
-    width: 100vw;
-  }
-}
+/*@media (max-width: 720px) {*/
+  /*.main {*/
+    /*width: 100vw;*/
+  /*}*/
+/*}*/
 
 @media (max-width: 414px) {
   .info-detail-img {
     width: 300px;
     height: 200px;
   }
+  /*.cell {*/
+    /*width: 40vw;*/
+  /*}*/
+  /*.info-child {*/
+    /*width: 28vw;*/
+  /*}*/
 }
 
 @media (max-width: 375px) {
