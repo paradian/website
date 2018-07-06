@@ -116,10 +116,10 @@ console.log('hello',window)
   #apply {
     width: 30%;
     height: auto;
-    font-size: 20px;
+    font-size: 1em;
     background: #569af9;
     border-radius: 30px;
-    padding: 2%;
+    padding: 3%;
     margin:  auto 0;
     color:#FFF
   }

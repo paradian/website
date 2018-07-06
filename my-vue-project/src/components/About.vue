@@ -112,7 +112,8 @@
               <span><input type="radio" name="identity" value="2">律所合伙人</span>
               <span><input type="radio" name="identity" value="3">执业律师</span>
               <span><input type="radio" name="identity" value="4" >助理律师</span>
-              <span><input type="radio" name="identity" value="5" id="the-other">其他身份 <input type="text" id="other" disabled="true"></span>
+              <span><input type="radio" name="identity" value="5" id="the-other">其他身份 </span>
+                <input type="text" id="other" disabled="true" placeholder="仅限其他身份填写">
               </div>
             </div>
             <div class="label-cell">
@@ -295,16 +296,21 @@ p.weight-text {
     display: flex;
     display: inline-block;
   }
-  #other {
-display: inline-block;
-    width: 100%;
-
-  }
+  /*#the-other {*/
+/*position: relative;*/
+  /*}*/
+  /*#other {*/
+/*display: inline-block;*/
+    /*width: auto;*/
+    /*position: absolute;*/
+    /*!*top: 10%;*!*/
+    /*left: 65%;*/
+  /*}*/
   #identity>span {
     margin:0%;
     display: inline-block;
     width: 22%;
-    /*height: 40px;*/
+
   }
   #identity>span:nth-of-type(2) {
 

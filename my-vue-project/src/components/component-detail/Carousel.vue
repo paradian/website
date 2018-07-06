@@ -14,13 +14,13 @@
       data () {
         return {
           mark: 0, //比对图片索引的变量
-          bannerList:["/static/images/1.png","/static/images/2.png","/static/images/3.png"]
+          bannerList:["/static/images/carousel-1.png","/static/images/carousel-2.png","/static/images/carousel-3.png","/static/images/carousel-4.png"]
         }
       },
       methods: {
         autoPlay () {
           this.mark++;
-          if (this.mark === 3) { //当遍历到最后一张图片置零
+          if (this.mark === 4) { //当遍历到最后一张图片置零
             this.mark = 0
           }
         },
@@ -58,21 +58,9 @@
     height: 300px;
   }
 
-  /*@media (max-width: 768px) {*/
-    /*.slide {*/
-      /*width: 100%;*/
-      /*height: 160px;*/
-    /*}*/
-    /*.slideshow {*/
-      /*width: 100%;*/
-    /*}*/
-    /*img {*/
-      /*width: 300px;*/
-      /*height:150px ;*/
-    /*}*/
-  /*}*/
 
-@media (max-width: 375px){
+
+@media (max-width: 414px){
   .slide {
 width: 100%;
     height: 160px;
@@ -81,7 +69,7 @@ width: 100%;
     width: 100%;
   }
   img {
-width: 300px;
+width: 70vw;
     height:150px ;
   }
 }
