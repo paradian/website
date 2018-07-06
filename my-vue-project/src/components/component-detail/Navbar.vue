@@ -12,7 +12,7 @@
           <li class="item"><router-link to='/product'>产品</router-link></li>
           <li> <router-link to='/'>新闻</router-link></li>
           <li> <router-link to='/about'>关于我们</router-link></li>
-          <li><button class="ask-use">申请使用</button></li>
+          <li><button class="ask-use"><router-link to="/product">申请使用</router-link></button></li>
         </ul>
       </div>
     </div>

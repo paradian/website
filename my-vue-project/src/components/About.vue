@@ -72,7 +72,9 @@
         <p class="partner-info">城市合伙人，需要什么条件？</p>
         <div class="img-container">
           <div class="img-cell"><img src="" alt=""></div>
-          <div class="img-cell"><div class="both"></div></div>
+          <div class="img-cell"><div class="both">
+            <img src="" alt=""><img src="" alt="">
+          </div></div>
           <div class="img-cell"><img src="" alt=""></div>
         </div>
         <p class="info-text">律师、企业法务、法律自媒体人均可；对互联网技术、效率工具有浓厚兴趣；开放热情，擅于沟通，擅于演讲更佳；在律所、律协、律师人群中有影响力</p>
@@ -101,16 +103,16 @@
             <label for="organization">
               律所名称
               </label>
-<div class="label-for" name="organization"><input type="text" ></div>
+            <div class="label-for" name="organization"><input type="text" ></div>
             </div>
             <div class="label-cell">
               <label for="identity">身份</label>
-              <div class="label-for" name="identity" style="vertical-align: top" >
+              <div class="label-for" name="identity" style="vertical-align: top" id="identity" @click="enableInput()">
                 <span><input type="radio" name="identity" value="1">律所主任</span>
               <span><input type="radio" name="identity" value="2">律所合伙人</span>
               <span><input type="radio" name="identity" value="3">执业律师</span>
-              <span><input type="radio" name="identity" value="4">助理律师</span>
-              <span><input type="radio" name="identity" value="5">其他身份 <input type="text" id="other"></span>
+              <span><input type="radio" name="identity" value="4" >助理律师</span>
+              <span><input type="radio" name="identity" value="5" id="the-other">其他身份 <input type="text" id="other" disabled="true"></span>
               </div>
             </div>
             <div class="label-cell">
@@ -138,7 +140,14 @@
       components : {
           'Navbar':Navbar,
         'Footer':Footer
-      }
+      },
+methods:{
+  enableInput(){
+            let otherSwitch=document.getElementById('the-other');
+            let otherDetail=document.getElementById(('other'));
+            otherSwitch.checked==true?otherDetail.disabled=false:otherDetail.disabled=true;
+          }
+}
     }
 </script>
 
@@ -228,15 +237,19 @@ width: 40px;
     display: flex;
     background-color: bisque;
     width: 100%;
-    height: 450px;
+    height: 400px;
     padding: 10px auto;
+    margin-bottom: 30px;
   }
 
   .img-cell {
     display: inline-block;
     border: solid 1px #000;
-    width: 200px;
+    width: 33%;
     height: 400px;
+  }
+  .both {
+    display: flex;
   }
   .to-be-partner {
     display: flex;
@@ -271,7 +284,7 @@ p.weight-text {
 
   .apply {
     border:1px solid #82abfd ;
-    padding:60px;
+    padding:7% 30px;
     margin-left: 44px;
     text-align: center;
   }
@@ -284,20 +297,32 @@ p.weight-text {
   }
   #other {
 display: inline-block;
+    width: 100%;
+
+  }
+  #identity>span {
+    margin:0%;
+    display: inline-block;
+    width: 22%;
+    /*height: 40px;*/
+  }
+  #identity>span:nth-of-type(2) {
+
+    width: 26%;
+  }
+  #identity>span:last-child {
+
     width: auto;
     zoom: 1;
   }
-  label:nth-of-type(3)>span {
-    margin:5%;
-  }
-  label:nth-of-type(3)>span:last-child {
-    position: relative;
-    left: 5%;
-  }
+
    input[type=text],input[type=phone] {
     display: inline-block;
     width: 100%;
   }
+   textarea {
+     width: 100%;
+   }
   #apply {
     width: 240px;
     height: 60px;
@@ -309,12 +334,12 @@ display: inline-block;
   }
   label {
     display: inline-block;
-    width: 20%;
+    width: 18%;
     text-align: left;
   }
 .label-for {
   display: inline-block;
-  width: 75%;
+  width: 78%;
 }
 .label-cell {
   margin-bottom: 8%;

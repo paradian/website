@@ -14,7 +14,7 @@
       data () {
         return {
           mark: 0, //比对图片索引的变量
-          bannerList:["/static/images/carousel-1.png","/static/images/carousel-2.png","/static/images/carousel-3.png"]
+          bannerList:["/static/images/1.png","/static/images/2.png","/static/images/3.png"]
         }
       },
       methods: {

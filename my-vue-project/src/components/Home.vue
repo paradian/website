@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <p>我们的功能不止这些</p>
+      <p class="owner-more">我们的功能不止这些</p>
       <button class="get-more">了解更多</button>
     </div>
 
@@ -163,7 +163,7 @@
       <p class="left-text">FREE TRIAL | 免费试用</p>
       </div>
       <div class="right">
-      <p class="right-text">找不到合适的产品?小律可以帮您<button>点我呦</button></p>
+      <p class="right-text">找不到合适的产品?小律可以帮您<button class="click-me">点我呦</button></p>
       </div>
     </div>
 <Footerbar></Footerbar>
@@ -218,6 +218,9 @@ p {
 }
 .product-info-text {
   margin-bottom: 60px;
+}
+.owner-more {
+  margin: 30px;
 }
 .cell {
   width: 40%;
@@ -330,41 +333,10 @@ p {
   color: rgba(255, 255, 255, 1);
   font-size: 20px;
 }
+.click-me {
+  padding: 10px 20px;
+}
 
-/*@media (max-width: 1280px) {*/
-  /*.cell {*/
-    /*width: 450px;*/
-  /*}*/
-  /*.info-child {*/
-    /*width: 300px;*/
-  /*}*/
-/*}*/
-/*@media (max-width: 1080px) {*/
-  /*.cell {*/
-    /*width: 450px;*/
-  /*}*/
-  /*.info-child {*/
-    /*width: 270px;*/
-  /*}*/
-/*}*/
-  /*@media (max-width: 980px) {*/
-    /*.cell {*/
-      /*width:300px;*/
-    /*}*/
-    /*.info-child {*/
-      /*width: 240px;*/
-    /*}*/
-    /*.info-detail-img {*/
-      /*width: 720px;*/
-      /*height: 320px;*/
-    /*}*/
-  /*}*/
-
-/*@media (max-width: 720px) {*/
-  /*.main {*/
-    /*width: 100vw;*/
-  /*}*/
-/*}*/
 
 @media (max-width: 414px) {
   .info-detail-img {
