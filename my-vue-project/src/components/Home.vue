@@ -9,17 +9,19 @@
       </div>
       <div class="info-cell">
         <div class="cell">
+          <div class="center">
           <div>
-            <img src="/static/images/intro-1.png" alt="">
+            <img src="/static/images/intro-1.png" alt=""></div>
             <div>
               <p class="small-title">诉讼引导系统</p>
-              <p class="cell-intro">功能介绍</p>
+              <p class="cell-intro">功能介绍功能介绍功能介绍功能介绍功能介绍</p>
             </div>
           </div>
         </div>
         <div class="cell">
+          <div class="center">
           <div>
-            <img src="/static/images/intro-1.png" alt="">
+            <img src="/static/images/intro-1.png" alt=""></div>
             <div>
               <p class="small-title">策略分析系统</p>
               <p class="cell-intro">功能介绍</p>
@@ -27,8 +29,9 @@
           </div>
         </div>
         <div class="cell">
+          <div class="center">
           <div>
-            <img src="/static/images/intro-3.png" alt="">
+            <img src="/static/images/intro-3.png" alt=""> </div>
             <div>
               <p class="small-title">协作办案系统</p>
               <p class="cell-intro">功能介绍</p>
@@ -36,8 +39,9 @@
           </div>
         </div>
         <div class="cell">
+          <div class="center">
           <div>
-            <img src="/static/images/intro-4.png" alt="">
+            <img src="/static/images/intro-4.png" alt="">  </div>
             <div>
               <p class="small-title">知识管理系统</p>
               <p class="cell-intro">功能介绍</p>
@@ -45,8 +49,9 @@
           </div>
         </div>
         <div class="cell">
+          <div class="center">
           <div>
-            <img src="/static/images/intro-5.png" alt="">
+            <img src="/static/images/intro-5.png" alt=""></div>
             <div>
               <p class="small-title">文书撰写系统</p>
               <p class="cell-intro">功能介绍</p>
@@ -54,8 +59,9 @@
           </div>
         </div>
         <div class="cell">
+          <div class="center">
           <div>
-            <img src="/static/images/intro-6.png" alt="">
+            <img src="/static/images/intro-6.png" alt=""> </div>
             <div>
               <p class="small-title">档案管理系统</p>
               <p class="cell-intro">功能介绍</p>
@@ -198,7 +204,7 @@ export default {
 }
 .small-title {
   font-size: 22px;
-
+color: #666;
 }
 p {
   margin: 0;
@@ -211,21 +217,30 @@ p {
 .info-title-unique {
   margin: 0px;
   font-size: 30px;
+  color: #666;
 }
 .product-info-text {
   margin-bottom: 60px;
 }
 .owner-more {
   margin: 30px;
+  color: #666;
 }
 .cell {
   width: 40%;
-  margin: 3%;
+  margin: 3% auto;
+  /*display: flex;*/
+  text-align: center;
+}
+.center {
+  margin: 0 auto;
+}
+.center>div {
+  display: inline-block;
 }
 .info-child {
   width: 30%;
-  height: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .info-child .cell-content {
   height: 100px;
@@ -244,6 +259,10 @@ p {
   height: 80px;
   z-index: 1;
 }
+.append-info {
+  color: #999;
+  font-size: 1.3em;
+}
 .info-detail-img {
   display: block;
   width: 70%;
@@ -252,6 +271,11 @@ p {
 }
 .info-detail {
   padding:  0 50px;
+  color: #858585;
+  text-align: center;
+}
+.cell-intro  {
+  color: #858585;
 }
 .product, .characteristic, .serve, .customer {
   padding: 90px 0;
@@ -261,15 +285,10 @@ p {
   padding: 90px 0;
 }
 
-.cell div {
-  display: inline-block;
-}
 .cell img {
-  width: 30px;
-  height: 30px;
-  display: inline;
-  position: relative;
-  top: -20px;
+  width: 40px;
+  height: 40px;
+ margin-left: 20px;
 }
 
 .get-more {
@@ -292,6 +311,7 @@ p {
 }
 .serve-title {
   font-size: 22px;
+  margin-bottom: 60px;
 }
 .serve-detail {
   font-size: 16px;
@@ -310,12 +330,38 @@ p {
     width: 300px;
     height: 200px;
   }
-  /*.cell {*/
-    /*width: 40vw;*/
-  /*}*/
-  /*.info-child {*/
-    /*width: 28vw;*/
-  /*}*/
+.center {
+  display: inline;
+  text-align: left;
+}
+.center>div:nth-of-type(1) {
+  width: 20%;
+}
+.center>div:nth-of-type(2) {
+  width: 75%;
+}
+  .cell {
+    width: 80vw;
+display: block;
+    margin: 2vh 0;
+  }
+
+  .cell img {
+    width: 40px;
+    height: 50px;
+    display: inline-block;
+  }
+  .info-child {
+    width: 80vw;
+  }
+  .info-detail-img {
+    width: 70vw;
+    height: 30vw;
+  }
+  .service-cell {
+    width: 35vw;
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 375px) {

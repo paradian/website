@@ -74,18 +74,21 @@ align-items: center;
    margin-bottom: 0px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 414px) {
   img {
     width: 50px;
     height: 50px;
   }
+.slice {
+  text-align: left;
+  font-size: 1rem;
 }
-
-@media (max-width: 360px) {
-  img {
-    width: 40px;
-    height: 40px;
-  }
+.slice .information {
+  margin-bottom: 10px;
+}
+.slice:last-child {
+  text-align: center;
+}
 }
 
 </style>
