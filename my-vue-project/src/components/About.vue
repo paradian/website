@@ -83,39 +83,38 @@
         <p class="partner-info">如何成为成为合伙人？</p>
         <div class="to-be-partner">
         <div class="introduce">
+          <div class="text-container">
             <p class="process-title">期限与流程</p>
           <p class="weight-text">合作期限：一年，到期可续约</p>
           <p class="process-title">申请流程</p>
           <p class="process-text">点击<span class="weight-text">“立即申请”</span>提交报名表</p>
           <p class="process-text">开通专属账号权限，获得支持</p>
           <p class="process-text">添加工作人员微信，实时交流</p>
-          <img src="/static/images/partner-img.png" alt="">
+          </div>
+          <div class="img-container">
+          <img src="/static/images/partner-img.png" alt=""></div>
         </div>
         <div class="apply">
           <form >
             <div class="label-cell">
-            <label for="name">
-             您的姓名
-              </label>
+            <label for="name">您的姓名</label>
             <div class="label-for" name="name"><input type="text"></div>
             </div>
             <div class="label-cell">
-            <label for="organization">
-              律所名称
-              </label>
+            <label for="organization">律所名称</label>
             <div class="label-for" name="organization"><input type="text" ></div>
             </div>
-            <div class="label-cell">
-              <label for="identity">身份</label>
-              <div class="label-for" name="identity" style="vertical-align: top" id="identity" @click="enableInput()">
-                <span><input type="radio" name="identity" value="1">律所主任</span>
-              <span><input type="radio" name="identity" value="2">律所合伙人</span>
-              <span><input type="radio" name="identity" value="3">执业律师</span>
-              <span><input type="radio" name="identity" value="4" >助理律师</span>
-              <span><input type="radio" name="identity" value="5" id="the-other">其他身份 </span>
-                <input type="text" id="other" disabled="true" placeholder="仅限其他身份填写">
-              </div>
-            </div>
+            <!--<div class="label-cell">-->
+              <!--<label for="identity">身份</label>-->
+              <!--<div class="label-for" name="identity" style="vertical-align: top" id="identity" @click="enableInput()">-->
+                <!--<span><input type="radio" name="identity" value="1">律所主任</span>-->
+              <!--<span><input type="radio" name="identity" value="2">律所合伙人</span>-->
+              <!--<span><input type="radio" name="identity" value="3">执业律师</span>-->
+              <!--<span><input type="radio" name="identity" value="4" >助理律师</span>-->
+              <!--<span><input type="radio" name="identity" value="5" id="the-other">其他身份 </span>-->
+                <!--<input type="text" id="other" disabled="true" placeholder="仅限其他身份填写">-->
+              <!--</div>-->
+            <!--</div>-->
             <div class="label-cell">
               <label for="phone">联系电话</label>
               <div class="label-for" name="phone"><input type="phone" ></div>
@@ -142,13 +141,13 @@
           'Navbar':Navbar,
         'Footer':Footer
       },
-methods:{
-  enableInput(){
-            let otherSwitch=document.getElementById('the-other');
-            let otherDetail=document.getElementById(('other'));
-            otherSwitch.checked==true?otherDetail.disabled=false:otherDetail.disabled=true;
-          }
-}
+// methods:{
+//   enableInput(){
+//             let otherSwitch=document.getElementById('the-other');
+//             let otherDetail=document.getElementById(('other'));
+//             otherSwitch.checked==true?otherDetail.disabled=false:otherDetail.disabled=true;
+//           }
+// }
     }
 </script>
 
@@ -227,7 +226,8 @@ width: 40px;
     font-size: 22px;
   }
 .info-text {
-  font-size: 16px;
+  font-size: 12px;
+  color: #999;
 }
 .requirement {
   text-align: center;
@@ -262,7 +262,9 @@ width: 40px;
   display: inline-block;
   height:500px;
 }
-
+.introduce .img-container {
+  background: none;
+}
 .introduce .process-title {
   font-size:24px ;
   color: #666;
@@ -273,17 +275,18 @@ width: 40px;
   color: #569af9;
 }
 p.weight-text {
-  margin-bottom: 60px;
+  margin-bottom: 5%;
 }
 .process-text {
   font-size: 20px;
   color: #999;
 }
   .introduce img {
-    width: 100%;
+    width: auto;
   }
 
   .apply {
+    width: 70%;
     border:1px solid #82abfd ;
     padding:7% 30px;
     margin-left: 44px;
@@ -292,35 +295,7 @@ p.weight-text {
   .apply form {
     text-align: left;
   }
-  #unique span:last-child {
-    display: flex;
-    display: inline-block;
-  }
-  /*#the-other {*/
-/*position: relative;*/
-  /*}*/
-  /*#other {*/
-/*display: inline-block;*/
-    /*width: auto;*/
-    /*position: absolute;*/
-    /*!*top: 10%;*!*/
-    /*left: 65%;*/
-  /*}*/
-  #identity>span {
-    margin:0%;
-    display: inline-block;
-    width: 22%;
 
-  }
-  #identity>span:nth-of-type(2) {
-
-    width: 26%;
-  }
-  #identity>span:last-child {
-
-    width: auto;
-    zoom: 1;
-  }
 
    input[type=text],input[type=phone] {
     display: inline-block;
@@ -348,9 +323,91 @@ p.weight-text {
   width: 78%;
 }
 .label-cell {
-  margin-bottom: 8%;
+  margin-bottom: 12%;
 }
   @media (max-width: 414px) {
+.get-cell {
+  width: 30vw;
+  margin-bottom: 2vw;
+}
+    .partner-info  {
+      font-size: 1.2em;
+    }
+    .info-title {
+      font-size: 1.0em;
+    }
+    .cell {
+      width: 20vw;
+    }
+    .cell .info-text, .cell .info-title {
+      color: #fff;
 
+    }
+    .boder {
+      left: 10%;
+    }
+    .to-be-partner {
+      flex-wrap: wrap;
+    }
+.introduce,.apply {
+  display: block;
+  width: 80vw;
+  height: auto;
+}
+ .introduce p.process-title {
+  font-size: 1.2em;
+   margin-bottom: 10px;
+}
+ .introduce p.process-text {
+   font-size: 12px;
+ }
+ .introduce p.process-text:last-child {
+   display: none;
+ }
+ span.weight-text {
+   font-size: 12px;
+ }
+ .introduce p.weight-text {
+   font-size: 12px;
+ }
+ .introduce {
+   display: flex;
+ }
+ .text-container {
+   width: 40vw;
+
+ }
+ .introduce .img-container{
+   width: 44vw;
+height: 50vw;
+ }
+ .img-container img {
+   width: 100%;
+   height: auto;
+ }
+ .apply {
+   margin-left: 0;
+ }
+ .label-cell {
+   width: 100%;
+ }
+ .label-for {
+   width: 40vw;
+ }
+ .apply label {
+   width: 20vw;
+ }
+ .apply input,textarea {
+   width: 40vw;
+ }
+    #apply {
+      width: 40vw;
+      height: 10vw;
+      font-size: 12px;
+      background: #569af9;
+      border-radius: 30px;
+      margin:  auto 0;
+      color:#FFF
+    }
   }
 </style>

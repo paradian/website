@@ -6,13 +6,31 @@
       </div>
       <div class="item-list">
         <ul class="list">
-          <li>
-            <router-link to='/'>首页</router-link>
-          </li>
-          <li class="item"><router-link to='/product'>产品</router-link></li>
-          <li> <router-link to='/news'>新闻</router-link></li>
+          <li><router-link to='/'>首页</router-link></li>
+          <li class="item"><router-link to='/product'>产品介绍</router-link></li>
           <li> <router-link to='/about'>关于我们</router-link></li>
-          <li><button class="ask-use"><router-link to="/apply">申请使用</router-link></button></li>
+          <li><router-link to="/partner">城市合伙人</router-link></li>
+          <li> <router-link to='/news'>新闻动态</router-link></li>
+        </ul>
+      </div>
+      <div class="button-container">
+        <button>预约试用</button>
+        <button>平台登陆</button>
+      </div>
+      <div class="collapse-switch" @click="this.Switch!=Switch">
+        <span class="boder"></span>
+        <span class="boder"></span>
+        <span class="boder"></span>
+      </div>
+      <div class="collapse" v-show="Switch">
+        <ul>
+          <li>首页</li>
+          <li>产品介绍</li>
+          <li>关于我们</li>
+          <li>城市合伙人</li>
+          <li>新闻动态</li>
+          <li>预约试用</li>
+          <li>平台登录</li>
         </ul>
       </div>
     </div>
@@ -26,6 +44,11 @@
   import Carousel from '../component-detail/Carousel'
     export default {
         name: "Navbar",
+      data() {
+          return {
+            Switch:false
+          }
+      },
       components: {
           'Carousel':Carousel
       }
@@ -70,17 +93,7 @@
     padding: 10px;
     color: #FFFFFF;
   }
-  .ask-use {
-    width: 120px;
-    height: 44px;
-    background: rgba(86, 154, 249, 1);
-    border: none;
-    border-radius: 5px;
-    position: relative;
-    top: -15%;
-    box-shadow: none;
-    color: #FFFFFF;
-  }
+
   .logo,
   .item-list {
     display: inline-block;
@@ -90,7 +103,14 @@
     color: #FFFFFF;
     text-decoration: none;
   }
-
+.collapse-switch span {
+  border:1px solid white;
+}
+.collapse-switch {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0}
   @media (max-width: 768px) {
     .item-list{
       left: 10%;
@@ -98,63 +118,28 @@
   }
 
   @media (max-width: 414px) {
-    .ask-use {
-      width: 75px;
-      height: 32px;
-    }
     .item-list {
-      left: 5%;
-    }
-    .list {
-      margin: 0px;
-      padding-left: 0px;
-    }
-    .nav .item-list .list>li {
-      padding: 4px;
-    }
-    .logo img {
-      top:15px;
-      left:20%;
-    }
-  }
-
-  /*iphone678*/
-  @media (max-width: 375px) {
-.logo,.item-list {
-  margin-left: 0px;
-  display: inline-block;
-}
-    .ask-use {
-      width: 75px;
-      height: 32px;
-    }
-    .item-list {
-      left: 5%;
-    }
-    .list {
-      margin: 0px;
-      padding-left: 0px;
-    }
-    .nav .item-list .list>li {
-      padding: 4px;
-    }
-    .logo img {
-      top:15px;
-      left:20%;
-    }
-  }
-
-  @media (max-width: 320px) {
-    .logo img {
-      width: 27px;
-      height: 27px;
       display: none;
     }
+    .ask-use {
+      width: 75px;
+      height: 32px;
+    }
     .item-list {
       left: 5%;
     }
-    .item-list .list li:last-child {
-      padding: 3px;
+    .list {
+      margin: 0px;
+      padding-left: 0px;
+    }
+    .nav .item-list .list>li {
+      padding: 4px;
+    }
+    .logo img {
+      top:15px;
+      left:20%;
     }
   }
+
+
 </style>

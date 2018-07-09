@@ -1,6 +1,6 @@
 <template>
-  <div id="topBanner" style="padding-top: 5px;" class="slide" >
-    <div v-for="(imgUrl, index) in bannerList" v-show="index===mark" :key="index" class="slideshow">
+  <div id="Carousel" style="padding:10px 0px;" class="slide" >
+    <div v-for="(imgUrl, index) in carouselImg" v-show="index===mark" :key="index" class="slideshow">
       <a href="#">
         <img :src=imgUrl>
       </a>
@@ -13,14 +13,14 @@
         name: "Carousel",
       data () {
         return {
-          mark: 0, //比对图片索引的变量
-          bannerList:["/static/images/carousel-1.png","/static/images/carousel-2.png","/static/images/carousel-3.png","/static/images/carousel-4.png"]
+          mark: 0,
+          carouselImg:["/static/images/carousel-1.png","/static/images/carousel-2.png","/static/images/carousel-3.png","/static/images/carousel-4.png"]
         }
       },
       methods: {
         autoPlay () {
           this.mark++;
-          if (this.mark === 4) { //当遍历到最后一张图片置零
+          if (this.mark === 4) {
             this.mark = 0
           }
         },

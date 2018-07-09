@@ -302,7 +302,7 @@ p {
 
 .service-cell {
   width: 20%;
-  margin-left: 30px;
+  padding: 0px 20px;
 }
 .service-cell img {
   width: 85px;
@@ -343,7 +343,7 @@ p {
   .cell {
     width: 80vw;
 display: block;
-    margin: 2vh 0;
+    margin: 5vw 0;
   }
 
   .cell img {
