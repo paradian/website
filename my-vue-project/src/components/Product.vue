@@ -251,4 +251,22 @@ p.title {
     height: 50px;
     margin-bottom: 20px;
   }
+
+  @media (max-width: 414px) {
+    section {
+      padding: 10px;
+    }
+    .cell {
+
+    }
+    .left {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .cell img {
+      width: 28vw;
+    }
+
+
+  }
 </style>

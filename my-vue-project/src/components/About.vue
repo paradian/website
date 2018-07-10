@@ -180,7 +180,6 @@ width: 40px;
     width: 100%;
     height: auto;
     text-align: center;
-
   }
 
   .partner:nth-of-type(2) {
@@ -379,7 +378,7 @@ p.weight-text {
  }
  .introduce .img-container{
    width: 44vw;
-height: 50vw;
+   height: 50vw;
  }
  .img-container img {
    width: 100%;

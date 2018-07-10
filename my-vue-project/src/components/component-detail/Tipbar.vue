@@ -4,7 +4,7 @@
       <p class="left-text">FREE TRIAL | 免费试用</p>
     </div>
     <div class="right">
-      <p class="right-text"><span>找不到合适的产品?小律可以帮您</span><button class="click-me">点我呦</button></p>
+      <p class="right-text"><span>找不到合适的产品?小律可以帮您</span><button class="click-me"><router-link to="/apply">点我呦</router-link></button></p>
     </div>
   </div>
 </template>
@@ -45,6 +45,11 @@
   }
   .click-me {
     padding: 10px 20px;
+
+  }
+  .click-me a {
+    text-decoration: none;
+    text-decoration-line: none;
   }
   @media (max-width: 414px) {
     .try {

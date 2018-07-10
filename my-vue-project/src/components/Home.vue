@@ -227,16 +227,22 @@ p {
   color: #666;
 }
 .cell {
-  width: 40%;
+  width: 46%;
   margin: 3% auto;
   /*display: flex;*/
   text-align: center;
 }
 .center {
   margin: 0 auto;
+  display: flex;
+  width: 300px;
 }
 .center>div {
   display: inline-block;
+}
+.center>div:last-child {
+  text-align: left;
+  width: 300px;
 }
 .info-child {
   width: 30%;
@@ -278,7 +284,7 @@ p {
   color: #858585;
 }
 .product, .characteristic, .serve, .customer {
-  padding: 90px 0;
+  padding: 60px 0;
 }
 .strength {
   background-color: #fafafb;

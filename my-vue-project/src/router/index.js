@@ -4,13 +4,17 @@ import Home from '@/components/Home'
 import Apply from '@/components/Apply'
 import About from '@/components/About'
 import Product from '@/components/Product'
+import  News from  '@/components/News'
+import Partner from '@/components/Partner'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path:'/',
+    redirect:'/home'},
     {
-      path: '/',
+      path: '/home',
       name: 'Home',
       component: Home
     },
@@ -27,6 +31,13 @@ export default new Router({
     {
       path:'/product',
       component:Product
+    },
+    {
+      path:'/news',
+      component:News
+    },
+    {path:'/partner',
+      component:Partner
     }
   ]
 })

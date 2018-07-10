@@ -36,12 +36,14 @@
             <button id="apply">了解更多</button>
           </div>
             <div class="get-us" v-show="!Switch">
+              <div class="text-container">
               <div class="intro"><p class="intro-text">您对我们的软件有任何疑问，请您直接联系我们的运营人员，
                 添加微信：lvbeiyunying；
                 或者直接扫描二维码。</p></div>
               <div class="get-more"><p class="intro-text">更多问题咨询
                 联系电话：025-83377231 转 售前中心
                 联系邮箱：yunying@oocas.com</p></div>
+              </div>
               <div class="img-container"><img src="/static/images/QRcode.png" alt="" class="QRcode"></div>
             </div>
           </div>
@@ -66,10 +68,14 @@ export default {
   },
   methods: {
     useView(){
-      this.Switch=true;
+      console.log(this.Switch)
+      this.Switch=true
+      console.log(this.Switch)
     },
     getView(){
+      console.log(this.Switch)
       this.Switch=false;
+      console.log(this.Switch)
     }
   },
     mounted:function (){
@@ -132,7 +138,7 @@ export default {
     width: 70%;
   }
   .label-cell {
-    margin-bottom: 15%;
+    margin-bottom: 8%;
   }
   input[type=text],input[type=phone] {
     display: inline-block;
@@ -161,20 +167,41 @@ export default {
   .get,.use {
     display: inline-block;
     width: 49.5%;
-    zoom: 1;
+    height: auto;
     margin: 0;
-    height: 60px;
-    padding-top: 20px;
+
+    padding: 20px;
     border: 1px solid #82abfd;
     border-collapse: collapse;
   }
   .active {
-    background-color: cadetblue;
+    background-color: #82abfd;
+    color: #fff;
   }
   .apply-to, .get-us {
-    padding: 60px;
+    padding: 60px 30px;
   }
- @media (max-width: 414px) {
+  .text-container{
+    display: inline-block;
+    width: 45%;
+  }
+  .get-us {
+    display: flex;
+    justify-content: space-between;
+  }
+  .get-more {
+    color: #666;
+  }
+  .img-container{
+    display: inline-block;
+    width: 45%;
+  }
+  .img-container  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 414px) {
    .try-to-use {
      flex-wrap: wrap;
    }
@@ -190,6 +217,49 @@ export default {
    label {
      width: auto;
    }
+  .text-container, .img-container {
+     display: block;
+    text-align: center;
+   }
+  .text-container {
+    width: 60vw;
+    text-align: left;
+  }
+  .img-container img {
+    width: 40vw;
+    margin-left: 20vw;
+    margin-bottom: 20vw;
+  }
+   .get-us {
+     display: block;
+     flex-wrap: wrap;
+     padding-bottom: 10px;
+     padding-top: 20px;
+     position: relative;
+   }
+.apply {
+  padding: 0;
+  width: 100%;
+}
+.label-cell {
+  width: 100%;
+  padding: 3vw;
+}
+
+.join {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.get-more{
+  position: absolute;
+  bottom: 0%;
+}
+.use,.get {
+  padding-top: 0;
+  padding: 10px;
+border-collapse: collapse;
+  height: auto;
+}
  }
 </style>
 
