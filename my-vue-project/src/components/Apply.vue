@@ -1,6 +1,9 @@
 <template>
     <div class="main">
       <Navbar></Navbar>
+      <div class="top-image">
+        <img src="/static/images/free-try.png" alt="">
+      </div>
       <section class="join">
         <div class="try-to-use">
           <div class="introduce">
@@ -22,18 +25,18 @@
                 <label for="name">
                   您的姓名
                 </label>
-                <div class="label-for" name="name"><input type="text"></div>
+                <div class="label-for" name="name"><input type="text" v-model="name" required></div>
               </div>
               <div class="label-cell">
                 <label for="phone">联系电话</label>
-                <div class="label-for" name="phone"><input type="phone" ></div>
+                <div class="label-for" name="phone"><input type="phone" v-model="phone"></div>
               </div>
               <div class="label-cell">
                 <label for="note">备注信息 </label>
-                <div class="label-for"><textarea name="note" id="" cols="30" rows="3" style="vertical-align: top"></textarea></div>
+                <div class="label-for"><textarea name="note" id="" cols="30" rows="3" style="vertical-align: top" v-model="remark"></textarea></div>
               </div>
             </form>
-            <button id="apply">了解更多</button>
+            <button id="apply" @click="apply()">申请试用</button>
           </div>
             <div class="get-us" v-show="!Switch">
               <div class="text-container">
@@ -59,7 +62,10 @@ import  Navbar from './component-detail/Navbar'
 export default {
   data () {
     return {
-      Switch:true
+      Switch:true,
+      name:'',
+      phone:'',
+      remark:''
     }
   },
   components: {
@@ -76,6 +82,14 @@ export default {
       console.log(this.Switch)
       this.Switch=false;
       console.log(this.Switch)
+    },
+    apply(){
+      var data={
+        name:this.name,
+        phone:this.phone,
+        marker:this.remark
+      }
+      console.log(data);
     }
   },
     mounted:function (){
@@ -200,7 +214,17 @@ export default {
     width: 100%;
     height: auto;
   }
-
+  .top-image {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right ,#0D135f,#0E1833);;
+  }
+  .top-image img {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
   @media (max-width: 414px) {
    .try-to-use {
      flex-wrap: wrap;

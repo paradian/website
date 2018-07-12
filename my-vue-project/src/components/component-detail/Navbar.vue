@@ -6,11 +6,11 @@
       </div>
       <div class="item-list">
         <ul class="list">
-          <li :class="{'background':Index==0}" @click="BackHome()"><router-link to='/'>首页</router-link></li>
-          <li :class="{'background':Index==1}" @click="BackProduct()"><router-link to='/product'>产品介绍</router-link></li>
-          <li :class="{'background':Index==2}" @click="BackAbout()"> <router-link to='/about'>关于我们</router-link></li>
-          <li :class="{'background':Index==3}" @click="BackPartner()"><router-link to="/partner">城市合伙人</router-link></li>
-          <li :class="{'background':Index==4}" @click="BackNews()"> <router-link to='/news'>新闻动态</router-link></li>
+          <li  :class="{'background':RoutePath=='/home'}" ><router-link to='/home'>首页</router-link></li>
+          <li  :class="{'background':RoutePath=='/product'}" ><router-link to='/product'>产品介绍</router-link></li>
+          <li  :class="{'background':RoutePath=='/partner'}" ><router-link to="/partner">城市合伙人</router-link></li>
+          <li  :class="{'background':RoutePath=='/news'}"> <router-link to='/news'>新闻中心</router-link></li>
+          <li  :class="{'background':RoutePath=='/about'}" > <router-link to='/about'>关于我们</router-link></li>
         </ul>
       </div>
       <div class="button-container">
@@ -35,56 +35,30 @@
         </ul>
       </div>
     </div>
-      <Carousel></Carousel>
   </div>
 
 
 </template>
 
 <script>
-  import Carousel from '../component-detail/Carousel'
     export default {
         name: "Navbar",
       data() {
           return {
             Switch:false,
-            Index:0
-
+            RoutePath:'',
           }
-      },
-      components: {
-          'Carousel':Carousel
       },
       methods:{
         SwitchHandle() {
 this.Switch=!this.Switch;
         },
-        BackHome(){
-         this.Index=0
-
-        },
-        BackProduct() {
-
-          this.Index=1;
-
-        },
-        BackAbout() {
-
-          this.Index=2;
-        },
-        BackPartner() {
-
-          this.Index=3;
-        },
-        BackNews() {
-
-          this.Index=4;
-        }
-
       },
-      mounted () {
+      created() {
+          console.log(this.$route.fullPath);
+          this.RoutePath=this.$route.fullPath;
+      },
 
-      }
     }
 </script>
 

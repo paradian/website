@@ -1,6 +1,7 @@
 <template>
   <div class="main">
 <Navbar></Navbar>
+    <Carousel></Carousel>
     <!-- 产品介绍 -->
     <div class="product">
       <div class="product-info-text">
@@ -174,6 +175,7 @@
   import Navbar from  './component-detail/Navbar';
   import Footerbar from './component-detail/Footer';
   import Tipbar from  './component-detail/Tipbar';
+  import  Carousel from  './component-detail/Carousel';
 export default {
   name: "Home",
   data() {

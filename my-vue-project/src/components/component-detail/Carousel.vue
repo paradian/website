@@ -14,22 +14,19 @@
       data () {
         return {
           mark: 0,
-          carouselImg:["/static/images/carousel-1.png","/static/images/carousel-2.png","/static/images/carousel-3.png","/static/images/carousel-4.png"]
+          carouselImg:["/static/images/carousel-1.png","/static/images/carousel-3.png","/static/images/carousel-4.png"]
         }
       },
       methods: {
         autoPlay () {
           this.mark++;
-          if (this.mark === 4) {
+          if (this.mark === 2) {
             this.mark = 0
           }
         },
         play () {
-          setInterval(this.autoPlay, 2500)
+          setInterval(this.autoPlay, 2000)
         },
-        change (i) {
-          this.mark = i
-        }
       },
       created () {
         this.play()
@@ -40,13 +37,14 @@
 
 <style scoped>
   .slide {
-    width: 85%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     margin-top: 80px;
     overflow: hidden;
     position: relative;
     text-align: center;
+    background: linear-gradient(to right ,#0D135f,#0E1833);
   }
   .slideshow {
     width: 80%;
@@ -54,7 +52,7 @@
     display: inline-block;
   }
   img {
-    width: 90%;
+    width: auto;
     height: 300px;
   }
 
