@@ -74,26 +74,16 @@
       enterDetail(index){
         console.log(index);
       },
-      //获取数据
       getList (res) {
-        //模拟
-            //子组件监听到count变化会自动更新DOM
-        // let url = `/api/list/?pageSize=${this.pageSize}&currentPage=${this.currentPage}`
-        // this.$http.get(url)
-        //   .then(({body}) => {
-        //     //子组件监听到count变化会自动更新DOM
-        //     this.count = body.count
-        //     this.items = body.list
-        //   })
         axios({
           method:'get',
           url:`https://cnodejs.org/api/v1/topics/?limit=${this.pageSize}&page=${this.currentPage}`,
           data:res,
         })
-          .then(function (body) {
-            console.log(body);
-            this.count = 20;
-                this.testarr = body.data.data
+          .then(function (paradian) {
+            console.log(paradian);
+            this.count =40;
+                this.testarr = paradian.data.data
           }.bind(this))
 
       },
@@ -166,7 +156,7 @@
       text-align: center;
       width: 100vw;
       height: auto;
-      background: linear-gradient(to right ,#0D135f,#0E1833);;
+      background: linear-gradient(to right ,#0D135f,#0E1833);
     }
     .top-image img {
       width: 70vw;

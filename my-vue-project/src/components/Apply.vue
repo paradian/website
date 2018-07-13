@@ -20,7 +20,7 @@
               <div class="get" @click="getView()" :class="{'active':Switch==false}">联系我们</div>
             </div>
             <div class="apply-to" v-show="Switch">
-            <form >
+            <form @submit.prevent="submit">
               <div class="label-cell">
                 <label for="name">
                   您的姓名
@@ -29,14 +29,15 @@
               </div>
               <div class="label-cell">
                 <label for="phone">联系电话</label>
-                <div class="label-for" name="phone"><input type="phone" v-model="phone"></div>
+                <div class="label-for" name="phone" ><input type="phone" v-model="phone" required pattern="^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}"></div>
               </div>
               <div class="label-cell">
                 <label for="note">备注信息 </label>
                 <div class="label-for"><textarea name="note" id="" cols="30" rows="3" style="vertical-align: top" v-model="remark"></textarea></div>
               </div>
+              <button id="apply" type="submit">申请试用</button>
             </form>
-            <button id="apply" @click="apply()">申请试用</button>
+
           </div>
             <div class="get-us" v-show="!Switch">
               <div class="text-container">
@@ -83,7 +84,7 @@ export default {
       this.Switch=false;
       console.log(this.Switch)
     },
-    apply(){
+   submit(){
       var data={
         name:this.name,
         phone:this.phone,
@@ -162,6 +163,9 @@ export default {
     width: 100%;
     display: inline-block;
   }
+  form {
+    text-align: center;
+  }
   #apply {
     width: 40%;
     height: auto;
@@ -169,7 +173,7 @@ export default {
     background: #569af9;
     border-radius: 30px;
     padding: 3%;
-    margin:  auto 0;
+    margin:  0  30%;
     color:#FFF
   }
   .controller {

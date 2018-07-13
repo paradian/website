@@ -22,7 +22,7 @@
         <div class="cell">
           <div class="center">
           <div>
-            <img src="/static/images/intro-1.png" alt=""></div>
+            <img src="/static/images/intro-2.png" alt=""></div>
             <div>
               <p class="small-title">策略分析系统</p>
               <p class="cell-intro">功能介绍</p>
@@ -246,6 +246,9 @@ p {
   text-align: left;
   width: 300px;
 }
+.center>div img {
+  margin-right: 20px;
+}
 .info-child {
   width: 30%;
   margin-bottom: 60px;
@@ -358,6 +361,7 @@ display: block;
     width: 40px;
     height: 50px;
     display: inline-block;
+    margin-left: 0;
   }
   .info-child {
     width: 80vw;

@@ -98,14 +98,14 @@
           <img src="/static/images/partner-img.png" alt=""></div>
         </div>
         <div class="apply">
-          <form >
+          <form @submit.prevent="submit">
             <div class="label-cell">
             <label for="name">您的姓名</label>
-            <div class="label-for" name="name"><input type="text"></div>
+            <div class="label-for" name="name"><input type="text" required></div>
             </div>
             <div class="label-cell">
             <label for="organization">律所名称</label>
-            <div class="label-for" name="organization"><input type="text" ></div>
+            <div class="label-for" name="organization"><input type="text" required></div>
             </div>
             <!--<div class="label-cell">-->
               <!--<label for="identity">身份</label>-->
@@ -120,14 +120,15 @@
             <!--</div>-->
             <div class="label-cell">
               <label for="phone">联系电话</label>
-              <div class="label-for" name="phone"><input type="phone" ></div>
+              <div class="label-for" name="phone"><input type="phone" required pattern="^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}" ></div>
             </div>
             <div class="label-cell">
               <label for="note">备注信息 </label>
                 <div class="label-for"><textarea name="note" id="" cols="30" rows="3" style="vertical-align: top"></textarea></div>
             </div>
+            <button id="apply" type="submit">立即申请</button>
           </form>
-          <button id="apply">立即申请</button>
+
         </div>
         </div>
       </section>
@@ -312,7 +313,7 @@ p.weight-text {
     font-size: 20px;
     background: #569af9;
     border-radius: 30px;
-    margin:  auto 0;
+    margin:  auto 30%;
     color:#FFF
   }
   label {
