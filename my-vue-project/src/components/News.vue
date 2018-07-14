@@ -98,7 +98,8 @@
       //请求第一页数据
       this.getList();
 
-    }
+    },
+
 
   }
 </script>

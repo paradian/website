@@ -6,7 +6,6 @@
         :class="['paging-item', 'paging-item--prev', {'paging-item--disabled' : index === 1}]"
         @click="prev">前页</li>
 
-
       <li
         :class="['paging-item', 'paging-item--first', {'paging-item--disabled' : index === 1}]"
         @click="first">首页</li>
@@ -138,6 +137,9 @@
       total(val) {
         this.size = val || 1
       }
+    },
+    updated() {
+      console.log(index);
     }
   }
 </script>

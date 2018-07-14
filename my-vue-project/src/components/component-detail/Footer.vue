@@ -67,7 +67,7 @@
   }
   .brand p{
     text-align: center;
-    margin: 0px;
+    margin: 30px;
     padding: 30px;
     color: #fff;
     font-size: 18px;
