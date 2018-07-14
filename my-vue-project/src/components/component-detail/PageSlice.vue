@@ -10,18 +10,12 @@
         :class="['paging-item', 'paging-item--first', {'paging-item--disabled' : index === 1}]"
         @click="first">首页</li>
 
-      <li
-        :class="['paging-item', 'paging-item--more']"
-        v-if="showPrevMore">...</li>
 
       <li
         :class="['paging-item', {'paging-item--current' : index === pager}]"
         v-for="pager in pagers"
         @click="go(pager)">{{ pager }}</li>
 
-      <li
-        :class="['paging-item', 'paging-item--more']"
-        v-if="showNextMore">...</li>
 
 
       <li
@@ -110,8 +104,6 @@
           offset.end = pageCount
         }
         if (offset.start < 1) offset.start = 1
-        this.showPrevMore = (offset.start > 1)
-        this.showNextMore = (offset.end < pageCount)
         for (let i = offset.start; i <= offset.end; i++) {
           array.push(i)
         }
@@ -122,9 +114,7 @@
       return {
         index : this.pageIndex,
         limit : this.pageSize,
-        size : this.total || 1,
-        showPrevMore : false,
-        showNextMore : false
+        size : this.total || 1
       }
     },
     watch : {
